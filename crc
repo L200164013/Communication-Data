@@ -1,0 +1,34 @@
+                          Assignment Data Communication
+                            ~ Berlian Edra Bagaskara ~
+ 
+                    - CRC for 2 Characters of Your First Name -
+
+P = 11 0101 (6 bits)
+FCS = 5 bits
+2 characters of my first name = B E = 0100 0010  0100 0101
+
+        ________________
+11010  |010000100100010100000
+         110101         
+         ------ xor     
+         0101000        
+          110101        
+          ------ xor    
+          0111010       
+           110101       
+           ------ xor   
+           00111110     
+             110101     
+             ------ xor 
+             00101100   
+               110101   
+               ------ xor
+               0110011  
+                110101  
+                ------ xor
+                000110010
+                   110101
+                   ------ xor
+                   000111 ==> R
+                   
+           so CRC is
